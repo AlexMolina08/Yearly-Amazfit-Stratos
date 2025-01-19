@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+def apiKey = localProperties.getProperty("API_KEY")
+
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.alex.app.yearly"
+        minSdkVersion 22
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "API_KEY", "\"${apiKey}\""
+    }
+    namespace "com.alex.app.yearly"
+    buildFeatures {
+        buildConfig = true // Enable custom BuildConfig fields
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation files('libs/SpringboardPluginLib.jar')
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.3'
+}

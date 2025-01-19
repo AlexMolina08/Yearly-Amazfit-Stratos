@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0d47a1</color> <!-- Neon Blue -->
+    <color name="primary_dark">#0b3d91</color> <!-- Dark Neon Blue -->
+    <color name="primary_light">#2196f3</color> <!-- Bright Neon Blue -->
+    <color name="accent">#ff4081</color> <!-- Neon Pink -->
+    <color name="primary_text">#e0e0e0</color> <!-- Light Gray -->
+    <color name="secondary_text">#b3e5fc</color> <!-- Soft Neon Blue -->
+    <color name="icons">#ffeb3b</color> <!-- Neon Yellow -->
+    <color name="divider">#616161</color> <!-- Dark Gray -->
+    <color name="background">#121212</color> <!-- Dark Background -->
+    <color name="response_background">#1f1b24</color> <!-- Slightly Lighter Dark -->
+    <color name="black_alpha">#66000000</color> <!-- 40% opaque black -->
+</resources>

@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!-- Main View -->
+    <RelativeLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Wheel Year Picker -->
+        <com.aigestudio.wheelpicker.widgets.WheelYearPicker
+            android:id="@+id/year_picker"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            app:wheel_item_text_color="@android:color/white"
+            app:wheel_selected_item_text_color="@color/icons"
+            app:wheel_item_text_size="40sp"
+            app:wheel_visible_item_count="3"
+            app:wheel_curved="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/ibmplex" />
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/confirm_button"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/year_picker"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/accent"
+            android:text="Enviar"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-black" />
+    </RelativeLayout>
+
+    <!-- Response View -->
+    <RelativeLayout
+        android:id="@+id/response_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/response_background">
+
+        <!-- ScrollView for Response Text -->
+        <ScrollView
+            android:id="@+id/response_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:id="@+id/response_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:text="Response will appear here"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="@font/ibmplex" />
+        </ScrollView>
+    </RelativeLayout>
+</FrameLayout>
